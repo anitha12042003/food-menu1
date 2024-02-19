@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        /*Smartphones (portrait and landscape) ---------- */
+    @media screen and (min-width: 320px) and (max-width: 480px){
+        body{
+			background: #7ce7e1;
+		}
+    }
+    /* Smartphones (portrait) ---------- */
+    @media screen and (max-width: 320px){
+        body{
+			background: #ffd280;
+		}
+    }
+    /* Smartphones (landscape) ---------- */
+    @media screen and (min-width: 321px){
+        body{
+			background: #9ddfbb;
+		}
+    }
+    /* tablets, iPads (portrait and landscape) ---------- */
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+        body{
+			background: #ffb497;
+		}
+    }
+    /* tablets, iPads (portrait) ---------- */
+    @media screen and (min-width: 768px){
+        body{
+			background: #f0e68c;
+		}
+    }
+    /* tablets, iPad…*/
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffeae0;
+            z-index: 3;
+        }
+        .nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+    position:fixed;
+    z-index: 1;
+    margin-left: 80px;
+    
+}
+.nav .logo h1{
+    font-weight: 600;
+    font-family: sans-serif;
+    color:black;
+    font-size: 40px;
+    margin-right: 50px;
+}
+.nav .logo b{
+    color: #ff511c;
+}
+
+.nav ul{
+    display:flex;
+    list-style: none;
+}
+.nav ul li{
+    margin-right: 30px;
+    
+}
+.nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-family: sans-serif;
+    font-size: 15px;
+    margin-left: 1px;
+}
+.nav ul li a:hover{
+      color: #ff511c;
+    
+}
+.nav ul .b::after{
+    content: "";
+    width: 50%;
+    height: 3px;
+    background-color: #ff511c;
+    display: flex;
+    position: relative;
+    margin-left: 10px;
+}
+input{
+    padding: 10px 20px;
+    font-weight: 600;
+}
+.signin{
+    background-color: #ff511c;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.1s;
+    margin-left: 100px;
+    margin-right: 20px;
+    border-radius: 5px; 
+}
+.signup{
+    background-color: #ff511c;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    transition: 0.1s;
+    margin-right: 180px;
+} 
+.signin:hover{
+    transform: scale(1.1);  
+}  
+.signup:hover{
+    transform: scale(1.1);  
+}
+
+        .titlebar{
+            color: black;
+            text-align: center;
+            padding: 20px;
+            display:inline-block;
+            margin-top:100px;
+            text-shadow:5px 5px 5px black;
+            margin-left: 550px;
+        }
+        #icon {
+            margin-left: 1100px;
+            color: black;
+            margin-bottom: 40px;
+            position: fixed;
+            z-index: 2;
+        
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .one {
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            padding: 10px;
+            border-radius: 10px;
+            position: relative;
+            background: #ffeae0;
+            outline: 2px solid #ff511c;
+            margin: 10px;
+            box-shadow: 0 8px 32px 0 #ff511c;
+            margin-right: 50px;
+        }
+
+        .container div img {
+            width: 150px;
+            height: 150px;
+            border-radius: 30%;
+            display:inline;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow: 0 10px 35px 0 rgba(13, 28, 228, 0.35);
+            border-left: 1px solid rgba(210, 181, 181, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, .3);
+            cursor: pointer;
+            transition: 0.1s;
+            margin-left: 13%;
+
+
+        }
+
+        .container div {
+            width: 200px;
+            color: white;
+            margin: 20px;
+            flex-basis: 20%;
+
+        }
+
+        h2 {
+            color:#ff511c;
+            padding: 10px 23px;
+            text-align: center;
+            margin-bottom: 1px;
+        }
+
+        h5{
+            color: black;
+            margin-top: 6px;
+        }
+        h5 i{
+            float: right;
+            color: #1cff3a;
+            padding: 3px;
+            text-shadow: 3px 3px 3px black;
+        
+    
+        }
+
+        .container div img:hover {
+            transform: scale(1.1);
+        }
+
+
+        
+    </style>
+</head>
+
+<body>
+    <section class="menu">
+        <div class="nav">
+            <div class="logo">
+                <h1><i>Food <b>Way</i></b></h1>
+            </div>
+            <ul>
+                <li><a class="b" href="food.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                 <li><a href="about.html">About</a></li> 
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+
+            <div>
+                <a href="login1.html"><input type="submit" class="signin" value="signin" ></a>
+                <input type="submit" class="signup" value="signup" >
+            </div>
+        </div>
+    </section>
+
+    <div>
+        <h1 class="titlebar">Menu</h1>
+        <div id="icon">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <i class="fa fa-heart" aria-hidden="true"></i>
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+        </div>
+        <div class="container">
+            <div>
+                <h2>Breakfast</h2>
+                <div class="one">
+                    <img src="image/breakfast7.png">
+                    <h5>Tasty Dish 01
+                    <h5>&#8377 50.0
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </h5>
+                </div>
+
+            </div>
+            <div>
+                <h2>lunch</h2>
+                <div class="one">
+                <img src="image/lunch1.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 400
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+            </h5>
+                
+                    
+                
+            </div>
+            </div>
+            <div>
+                <h2>Dinnar</h2>
+                <div class="one">
+                <img src="image/dinnar1.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 250
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+            
+                
+            </div>
+            </div>
+            <div>
+                <h2>icscream</h2>
+                <div class="one">
+                <img src="image/a.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 50.0
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+               
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/breakfast8.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 50.0
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/lunch2.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 400 
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+               
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/dinnar2.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5> &#8377 250
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/b.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5> &#8377 50.0
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/breakfast4.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5> &#8377 50.0
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/lunch3.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 400
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/dinnar5.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 250
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/icscream.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 50.0
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/breakfast5.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 50.0
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+               
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/lunch4.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 400
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+            </div>
+            </div>
+
+            <div>
+                <div class="one">
+                <img src="image/dinnar4.png" alt="">
+                <h5>Tasty Dish 01</h5>
+                <h5>&#8377 250
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+            </div>
+            </div>
+            <div>
+                <div class="one">
+                <img src="image/c.png" alt="">
+                <h5>Testy Dish 01</h5>
+                <h5>&#8377 50.0
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </h5>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+</body>
+
+</html>

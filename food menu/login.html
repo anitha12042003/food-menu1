@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        /*Smartphones (portrait and landscape) ---------- */
+    @media screen and (min-width: 320px) and (max-width: 480px){
+        body{
+			background: #7ce7e1;
+		}
+    }
+    /* Smartphones (portrait) ---------- */
+    @media screen and (max-width: 320px){
+        body{
+			background: #ffd280;
+		}
+    }
+    /* Smartphones (landscape) ---------- */
+    @media screen and (min-width: 321px){
+        body{
+			background: #9ddfbb;
+		}
+    }
+    /* tablets, iPads (portrait and landscape) ---------- */
+    @media screen and (min-width: 768px) and (max-width: 1024px){
+        body{
+			background: #ffb497;
+		}
+    }
+    /* tablets, iPads (portrait) ---------- */
+    @media screen and (min-width: 768px){
+        body{
+			background: #f0e68c;
+		}
+    }
+    /* tablets, iPad…*/
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+            font-family: 'Poppins', sans-serif;
+        
+        }
+
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, #ffeae0,#ff1ce8);
+        }
+        
+
+        form {
+            width: 22rem;
+            height: 26rem;
+            display: flex;
+            flex-direction: column;
+            background: rgba(255, 255, 255, 0.06);
+            box-shadow: 0 8px 32px 0 rgba(16, 28, 196, 0.37);
+            border-radius: 30px;
+            border-left: 1px solid rgba(210, 181, 181, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, .3);
+
+        }
+
+        form::before {
+            content: '';
+            position: absolute;
+            bottom: 0%;
+            right: 28%;
+            width: 170px;
+            height: 170px;
+            background-color:#ff1cdd;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: .7;
+        }
+
+        form:after {
+            content: '';
+            position: absolute;
+            top: 8%;
+            left: 32%;
+            width: 120px;
+            height: 120px;
+            background-color: #ff1cb7;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: .6;
+        }
+
+        h1 {
+            font-size: 50px;
+            text-align: center;
+            color: aliceblue;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+            letter-spacing: 3px;
+            margin-bottom: 4%;
+            opacity: .7;
+        }
+
+        label {
+            font-size: 20px;
+            color: aliceblue;
+            margin-left: 10%;
+            opacity: .8;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
+        }
+
+        input {
+            width: 80%;
+            margin-left: 10%;
+            margin-bottom: 8%;
+            border: none;
+            outline: none;
+            background: transparent;
+            color: white;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+            opacity: .8;
+        }
+
+        button {
+            width: 50%;
+            margin-left: 25%;
+            color: white;
+            font-size: 15px;
+            opacity: .7;
+            background: rgba(255, 255, 255, 0.06);
+            padding: 10px 30px;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, .3);
+            box-shadow: 3px 3px 5px rgba(31, 38, 135, .37);
+            border-top: 1px solid rgba(255, 255, 255, .3);
+            cursor: pointer;
+
+        }
+
+
+        img {
+            position: absolute;
+            margin-top: -11%;
+            margin-left: 150px;
+            border-radius: 40px;
+        }
+
+        .fpasswor {
+            margin-top: 25px;
+            padding-top: 20px;
+            text-align: center;
+            
+
+
+        }
+    </style>
+    </style>
+</head>
+
+<body>
+    <form action="food.html">
+        <h1>LOGIN</h1>
+        <div class="main">
+            <img src="image/user.png" height="75" width="75">
+            <label>Username</label>
+            <input type="text">
+            <label>Email id</label>
+            <input type="text">
+            <label>Password</label>
+            <input type="Password">
+            <button>login</button>
+            <br>
+
+            <div class="fpasswor">
+                <a href="#">Forgot Password?</a>
+            </div>
+
+
+        </div>
+    </form>
+
+
+</body>
+
+</html>
